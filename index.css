@@ -1,0 +1,399 @@
+/*
+  ============================================================
+  AQUVANA DESIGN SYSTEM
+  ============================================================
+
+  Global design tokens and base styles for AQUVANA.
+
+  Brand concept:
+  Water + Growth + Resilience.
+  ============================================================
+*/
+
+
+/* ============================================================
+   FONTS
+   ============================================================ */
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap'
+);
+
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+:root {
+
+  /* Brand colors */
+
+  --aquvana-deep-ocean-teal: #075E63;
+  --aquvana-aqua-blue: #22A6B3;
+  --aquvana-fresh-leaf-green: #4F9D69;
+  --aquvana-deep-forest-green: #174A3A;
+
+  --aquvana-soft-mint: #E8F5EF;
+  --aquvana-pale-water: #F2FAFA;
+  --aquvana-soft-sand: #F4E9D3;
+
+  --aquvana-white: #FFFFFF;
+
+  --aquvana-charcoal-black: #263238;
+  --aquvana-muted-slate: #607477;
+
+  --aquvana-soft-border: #D8E8E7;
+
+
+  /* Typography */
+
+  --aquvana-heading-font: "Manrope", sans-serif;
+  --aquvana-body-font: "DM Sans", sans-serif;
+
+
+  /* UI */
+
+  --aquvana-radius-small: 8px;
+  --aquvana-radius-medium: 14px;
+  --aquvana-radius-large: 22px;
+
+  --aquvana-shadow-soft:
+    0 8px 30px rgba(7, 94, 99, 0.08);
+
+  --aquvana-shadow-card:
+    0 12px 35px rgba(7, 94, 99, 0.10);
+
+  --aquvana-transition:
+    180ms ease;
+
+
+  /* Global document settings */
+
+  color-scheme: light;
+  color: var(--aquvana-charcoal-black);
+  background-color: var(--aquvana-pale-water);
+  font-family: var(--aquvana-body-font);
+}
+
+
+/* ============================================================
+   GLOBAL DOCUMENT
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--aquvana-pale-water);
+}
+
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  background-color: var(--aquvana-pale-water);
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================================================
+   ROOT
+   ============================================================ */
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100svh;
+
+  margin: 0;
+  border: none;
+
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  letter-spacing: -1.5px;
+}
+
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  letter-spacing: -0.7px;
+}
+
+
+h3 {
+  font-size: 1.4rem;
+}
+
+
+h4 {
+  font-size: 1.15rem;
+}
+
+
+p {
+  margin: 0;
+
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+small {
+  color: var(--aquvana-muted-slate);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-body-font);
+
+  text-decoration: none;
+
+  transition:
+    color var(--aquvana-transition),
+    opacity var(--aquvana-transition);
+}
+
+
+a:hover {
+  color: var(--aquvana-aqua-blue);
+}
+
+
+/* ============================================================
+   BUTTON FOUNDATION
+   ============================================================ */
+
+button {
+  border: none;
+
+  font-family: var(--aquvana-body-font);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--aquvana-transition),
+    color var(--aquvana-transition),
+    border-color var(--aquvana-transition),
+    transform var(--aquvana-transition),
+    box-shadow var(--aquvana-transition);
+}
+
+
+/* ============================================================
+   ACCESSIBILITY / FOCUS
+   ============================================================ */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(34, 166, 179, 0.35);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   FORM FOUNDATION
+   ============================================================ */
+
+input,
+textarea,
+select {
+  color: var(--aquvana-charcoal-black);
+  background-color: var(--aquvana-white);
+
+  border: 1px solid var(--aquvana-soft-border);
+  border-radius: var(--aquvana-radius-small);
+
+  font-family: var(--aquvana-body-font);
+
+  outline: none;
+
+  transition:
+    border-color var(--aquvana-transition),
+    box-shadow var(--aquvana-transition);
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--aquvana-aqua-blue);
+
+  box-shadow:
+    0 0 0 3px rgba(34, 166, 179, 0.12);
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--aquvana-muted-slate);
+  opacity: 0.75;
+}
+
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ============================================================
+   TEXT SELECTION
+   ============================================================ */
+
+::selection {
+  background-color: var(--aquvana-aqua-blue);
+  color: var(--aquvana-white);
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: var(--aquvana-pale-water);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--aquvana-deep-ocean-teal);
+  border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--aquvana-aqua-blue);
+}
+
+
+/* ============================================================
+   GLOBAL AQUVANA UTILITIES
+   ============================================================ */
+
+.aquvana-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+.aquvana-section {
+  padding: 80px 0;
+}
+
+
+.aquvana-muted {
+  color: var(--aquvana-muted-slate);
+}
+
+
+.aquvana-brand-text {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+  font-weight: 800;
+}
+
+
+.aquvana-green-text {
+  color: var(--aquvana-fresh-leaf-green);
+
+  font-family: var(--aquvana-heading-font);
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   GLOBAL RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .aquvana-container {
+    width: min(100% - 28px, 1180px);
+  }
+
+
+  .aquvana-section {
+    padding: 55px 0;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+
+  p {
+    font-size: 15px;
+  }
+
+
+  .aquvana-container {
+    width: min(100% - 22px, 1180px);
+  }
+
+}

@@ -1,0 +1,1324 @@
+/*
+  ============================================================
+  AQUVANA APPLICATION UI
+  ============================================================
+
+  Component and page-specific styles.
+
+  Global design tokens and global element styles live in
+  index.css.
+
+  This file contains:
+  - Application layout
+  - Pages
+  - Sections
+  - Buttons
+  - Cards
+  - Forms
+  - Grids
+  - Navbar
+  - Footer
+  - Home page
+  ============================================================
+*/
+
+
+/* ============================================================
+   APP
+   ============================================================ */
+
+.aquvana-app {
+  min-height: 100vh;
+
+  background-color: var(--aquvana-pale-water);
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.aquvana-main {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+
+/* ============================================================
+   PAGE CONTAINER
+   ============================================================ */
+
+.aquvana-page {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .aquvana-page {
+    width: min(100% - 28px, 1180px);
+    padding: 45px 0;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .aquvana-page {
+    width: min(100% - 22px, 1180px);
+    padding: 35px 0;
+  }
+
+}
+
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.aquvana-section-header {
+  max-width: 720px;
+  margin-bottom: 45px;
+}
+
+
+.aquvana-section-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--aquvana-fresh-leaf-green);
+
+  font-family: var(--aquvana-heading-font);
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+
+.aquvana-section-title {
+  margin-bottom: 16px;
+
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+
+.aquvana-section-description {
+  max-width: 650px;
+
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.aquvana-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 46px;
+  padding: 11px 20px;
+
+  border: 1px solid transparent;
+  border-radius: var(--aquvana-radius-small);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--aquvana-transition),
+    color var(--aquvana-transition),
+    border-color var(--aquvana-transition),
+    transform var(--aquvana-transition),
+    box-shadow var(--aquvana-transition);
+}
+
+
+.aquvana-button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Primary */
+
+.aquvana-button-primary {
+  background-color: var(--aquvana-deep-ocean-teal);
+  color: var(--aquvana-white);
+
+  box-shadow:
+    0 6px 18px rgba(7, 94, 99, 0.18);
+}
+
+
+.aquvana-button-primary:hover {
+  background-color: var(--aquvana-deep-forest-green);
+  color: var(--aquvana-white);
+
+  box-shadow:
+    0 8px 22px rgba(7, 94, 99, 0.22);
+}
+
+
+/* Secondary */
+
+.aquvana-button-secondary {
+  background-color: var(--aquvana-white);
+  color: var(--aquvana-deep-ocean-teal);
+
+  border-color: var(--aquvana-soft-border);
+}
+
+
+.aquvana-button-secondary:hover {
+  background-color: var(--aquvana-pale-water);
+
+  border-color: var(--aquvana-aqua-blue);
+  color: var(--aquvana-aqua-blue);
+}
+
+
+/* Green */
+
+.aquvana-button-green {
+  background-color: var(--aquvana-fresh-leaf-green);
+  color: var(--aquvana-white);
+}
+
+
+.aquvana-button-green:hover {
+  background-color: var(--aquvana-deep-forest-green);
+  color: var(--aquvana-white);
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.aquvana-card {
+  padding: 24px;
+
+  background-color: var(--aquvana-white);
+
+  border: 1px solid var(--aquvana-soft-border);
+  border-radius: var(--aquvana-radius-medium);
+
+  box-shadow: var(--aquvana-shadow-soft);
+
+  transition:
+    transform var(--aquvana-transition),
+    box-shadow var(--aquvana-transition),
+    border-color var(--aquvana-transition);
+}
+
+
+.aquvana-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(34, 166, 179, 0.35);
+
+  box-shadow: var(--aquvana-shadow-card);
+}
+
+
+/* ============================================================
+   CARD CONTENT
+   ============================================================ */
+
+.aquvana-card-title {
+  margin-bottom: 8px;
+
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+  font-size: 20px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+.aquvana-card-description {
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.aquvana-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-family: var(--aquvana-body-font);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.aquvana-badge-green {
+  color: var(--aquvana-deep-forest-green);
+  background-color: var(--aquvana-soft-mint);
+}
+
+
+.aquvana-badge-blue {
+  color: var(--aquvana-deep-ocean-teal);
+  background-color: rgba(34, 166, 179, 0.12);
+}
+
+
+.aquvana-badge-sand {
+  color: #725B35;
+  background-color: var(--aquvana-soft-sand);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.aquvana-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* Explicit 3-column variant */
+
+.aquvana-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* Four-column variant */
+
+.aquvana-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+@media (max-width: 900px) {
+
+  .aquvana-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .aquvana-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .aquvana-grid,
+  .aquvana-grid-3,
+  .aquvana-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   TWO COLUMN LAYOUT
+   ============================================================ */
+
+.aquvana-two-column {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+
+  .aquvana-two-column {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
+
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+
+.aquvana-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.aquvana-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.aquvana-form-label {
+  color: var(--aquvana-deep-forest-green);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.aquvana-form-input {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 11px 13px;
+
+  border: 1px solid var(--aquvana-soft-border);
+  border-radius: var(--aquvana-radius-small);
+
+  background-color: var(--aquvana-white);
+  color: var(--aquvana-charcoal-black);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color var(--aquvana-transition),
+    box-shadow var(--aquvana-transition);
+}
+
+
+.aquvana-form-input:focus {
+  border-color: var(--aquvana-aqua-blue);
+
+  box-shadow:
+    0 0 0 3px rgba(34, 166, 179, 0.12);
+}
+
+
+.aquvana-form-error {
+  color: #A33A3A;
+
+  font-family: var(--aquvana-body-font);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+.aquvana-form-success {
+  color: var(--aquvana-deep-forest-green);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.aquvana-empty-state {
+  padding: 45px 25px;
+
+  text-align: center;
+
+  background-color: var(--aquvana-white);
+
+  border: 1px dashed var(--aquvana-soft-border);
+  border-radius: var(--aquvana-radius-medium);
+}
+
+
+.aquvana-empty-state h3 {
+  margin-bottom: 8px;
+}
+
+
+.aquvana-empty-state p {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  color: var(--aquvana-muted-slate);
+}
+
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.aquvana-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+.aquvana-stat-card {
+  padding: 22px;
+
+  background-color: var(--aquvana-white);
+
+  border: 1px solid var(--aquvana-soft-border);
+  border-radius: var(--aquvana-radius-medium);
+
+  box-shadow: var(--aquvana-shadow-soft);
+}
+
+
+.aquvana-stat-label {
+  margin-bottom: 7px;
+
+  color: var(--aquvana-muted-slate);
+
+  font-family: var(--aquvana-body-font);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.aquvana-stat-value {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+
+@media (max-width: 900px) {
+
+  .aquvana-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .aquvana-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   AQUVANA NAVBAR
+   ============================================================ */
+
+.aquvana-navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, 0.96);
+
+  border-bottom: 1px solid var(--aquvana-soft-border);
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* ============================================================
+   NAVBAR INNER
+   ============================================================ */
+
+.aquvana-navbar-inner {
+  width: min(1180px, calc(100% - 40px));
+
+  min-height: 78px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* ============================================================
+   NAVBAR LOGO
+   ============================================================ */
+
+.aquvana-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+
+.aquvana-logo:hover {
+  text-decoration: none;
+}
+
+
+.aquvana-logo-name {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: 24px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 1.5px;
+}
+
+
+.aquvana-logo-tagline {
+  margin-top: 5px;
+
+  color: var(--aquvana-fresh-leaf-green);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.aquvana-nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+}
+
+
+.aquvana-nav-link {
+  position: relative;
+
+  padding: 27px 0;
+
+  color: var(--aquvana-muted-slate);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color var(--aquvana-transition);
+}
+
+
+.aquvana-nav-link:hover {
+  color: var(--aquvana-deep-ocean-teal);
+}
+
+
+.aquvana-nav-link.active {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-weight: 700;
+}
+
+
+.aquvana-nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 18px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background-color: var(--aquvana-fresh-leaf-green);
+}
+
+
+/* ============================================================
+   NAVBAR ACTIONS
+   ============================================================ */
+
+.aquvana-navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+
+.aquvana-login-link {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.aquvana-login-link:hover {
+  color: var(--aquvana-aqua-blue);
+}
+
+
+.aquvana-register-button {
+  min-height: 40px;
+
+  padding: 9px 16px;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   NAVBAR — TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .aquvana-navbar-inner {
+    gap: 18px;
+  }
+
+
+  .aquvana-nav {
+    gap: 18px;
+  }
+
+
+  .aquvana-navbar-actions {
+    gap: 9px;
+  }
+
+}
+
+
+/* ============================================================
+   NAVBAR — MOBILE
+   ============================================================ */
+
+@media (max-width: 720px) {
+
+  .aquvana-navbar-inner {
+    min-height: 70px;
+
+    width: min(100% - 28px, 1180px);
+  }
+
+
+  .aquvana-nav {
+    display: none;
+  }
+
+
+  .aquvana-logo-tagline {
+    display: none;
+  }
+
+
+  .aquvana-login-link {
+    display: none;
+  }
+
+
+  .aquvana-register-button {
+    width: auto;
+  }
+
+}
+
+
+/* ============================================================
+   AQUVANA FOOTER
+   ============================================================ */
+
+.aquvana-footer {
+  margin-top: auto;
+
+  background-color: var(--aquvana-deep-forest-green);
+
+  color: var(--aquvana-white);
+}
+
+
+/* ============================================================
+   FOOTER INNER
+   ============================================================ */
+
+.aquvana-footer-inner {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 60px 0;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 60px;
+}
+
+
+/* ============================================================
+   FOOTER BRAND
+   ============================================================ */
+
+.aquvana-footer-brand {
+  max-width: 430px;
+}
+
+
+.aquvana-footer-logo {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--aquvana-white);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: 26px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+}
+
+
+.aquvana-footer-logo:hover {
+  color: var(--aquvana-aqua-blue);
+}
+
+
+.aquvana-footer-tagline {
+  margin-bottom: 14px;
+
+  color: var(--aquvana-aqua-blue);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+
+.aquvana-footer-description {
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   FOOTER COLUMNS
+   ============================================================ */
+
+.aquvana-footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+
+.aquvana-footer-title {
+  margin: 0 0 8px;
+
+  color: var(--aquvana-white);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+.aquvana-footer-link {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    color var(--aquvana-transition),
+    transform var(--aquvana-transition);
+}
+
+
+.aquvana-footer-link:hover {
+  color: var(--aquvana-aqua-blue);
+
+  transform: translateX(2px);
+}
+
+
+/* ============================================================
+   FOOTER BOTTOM
+   ============================================================ */
+
+.aquvana-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.aquvana-footer-bottom-inner {
+  width: min(1180px, calc(100% - 40px));
+
+  min-height: 62px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.aquvana-footer-bottom-inner p {
+  color: rgba(255, 255, 255, 0.58);
+
+  font-family: var(--aquvana-body-font);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   FOOTER — TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .aquvana-footer-inner {
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 35px;
+
+    padding: 50px 0;
+  }
+
+}
+
+
+/* ============================================================
+   FOOTER — MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .aquvana-footer-inner {
+    width: min(100% - 28px, 1180px);
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 45px 0;
+  }
+
+
+  .aquvana-footer-brand {
+    max-width: none;
+  }
+
+
+  .aquvana-footer-bottom-inner {
+    width: min(100% - 28px, 1180px);
+
+    min-height: auto;
+
+    padding: 18px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+}
+
+
+/* ============================================================
+   AQUVANA HOME — HERO
+   ============================================================ */
+
+.aquvana-hero {
+  position: relative;
+
+  padding: 95px 0 105px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--aquvana-pale-water) 0%,
+      var(--aquvana-white) 55%,
+      var(--aquvana-soft-mint) 100%
+    );
+
+  overflow: hidden;
+}
+
+
+.aquvana-hero-content {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   HERO BRAND / FUTURE LOGO
+   ============================================================
+
+   Reserved for the future visible AQUVANA logo treatment.
+   The current Home.jsx does not use these classes.
+   ============================================================ */
+
+.aquvana-hero-brand {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  color: var(--aquvana-deep-ocean-teal);
+
+  text-decoration: none;
+}
+
+
+.aquvana-hero-brand:hover {
+  color: var(--aquvana-deep-ocean-teal);
+}
+
+
+.aquvana-hero-logo {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+
+.aquvana-hero-brand-name {
+  color: var(--aquvana-deep-ocean-teal);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: 32px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   HERO TITLE
+   ============================================================ */
+
+.aquvana-hero-title {
+  max-width: 850px;
+
+  margin: 0 auto 22px;
+
+  color: var(--aquvana-deep-forest-green);
+
+  font-family: var(--aquvana-heading-font);
+
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+
+.aquvana-hero-title .aquvana-brand-text {
+  color: var(--aquvana-deep-ocean-teal);
+}
+
+
+/* ============================================================
+   HERO DESCRIPTION
+   ============================================================ */
+
+.aquvana-hero-description {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: var(--aquvana-muted-slate);
+
+  font-size: 18px;
+
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   HERO ACTIONS
+   ============================================================ */
+
+.aquvana-hero-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+
+/* ============================================================
+   HOME SECTION BACKGROUNDS
+   ============================================================ */
+
+.aquvana-section-soft {
+  background-color: var(--aquvana-white);
+}
+
+
+.aquvana-section-mint {
+  background-color: var(--aquvana-soft-mint);
+}
+
+
+.aquvana-section-cta {
+  background-color: var(--aquvana-deep-ocean-teal);
+
+  color: var(--aquvana-white);
+}
+
+
+/* ============================================================
+   HOME CTA
+   ============================================================ */
+
+.aquvana-cta {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.aquvana-cta h2 {
+  margin-bottom: 16px;
+
+  color: var(--aquvana-white);
+}
+
+
+.aquvana-cta p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   RESPONSIVE UTILITIES
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .aquvana-card {
+    padding: 20px;
+  }
+
+
+  .aquvana-button {
+    width: 100%;
+  }
+
+}
+
+
+/* ============================================================
+   HOME — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .aquvana-hero {
+    padding: 70px 0 80px;
+  }
+
+
+  .aquvana-hero-brand {
+    margin-bottom: 24px;
+  }
+
+
+  .aquvana-hero-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 28px;
+    object-fit: contain;
+  }
+
+
+  .aquvana-hero-brand-name {
+    font-size: 27px;
+  }
+
+
+  .aquvana-hero-title {
+    letter-spacing: -1.3px;
+  }
+
+
+  .aquvana-hero-description {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .aquvana-hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .aquvana-hero-actions .aquvana-button {
+    width: 100%;
+  }
+
+}
