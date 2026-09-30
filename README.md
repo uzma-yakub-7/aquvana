@@ -4,6 +4,10 @@
 
 ## Grow Through Rising Waters
 
+## 🎥 AQUVANA Video
+
+[▶️ Watch the AQUVANA Video](./aquvana-video.mp4)
+
 # SOFTWARE REQUIREMENTS SPECIFICATION
 
 **Project Name:** AQUVANA
