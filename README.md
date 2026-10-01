@@ -8,6 +8,10 @@
 
 [▶️ Watch the AQUVANA Video](./aquvana-video.mp4)
 
+
+(./aquvana-dashboard.jpg)
+
+
 # SOFTWARE REQUIREMENTS SPECIFICATION
 
 **Project Name:** AQUVANA
