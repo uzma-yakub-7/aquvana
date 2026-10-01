@@ -9,7 +9,8 @@
 [▶️ Watch the AQUVANA Video](./aquvana-video.mp4)
 
 
-(./aquvana-dashboard.jpg)
+
+![Alt Text](./aquvana-dashboard.jpg)
 
 
 # SOFTWARE REQUIREMENTS SPECIFICATION
